@@ -1,0 +1,44 @@
+(base) deepak@TIGER03271:~$ ls
+miniconda3  my_unix_session  win-home
+(base) deepak@TIGER03271:~$ cd miniconda3/
+bin/                         envs/                        pkgs/                        x86_64-conda-linux-gnu/
+compiler_compat/             etc/                         share/                       x86_64-conda_cos6-linux-gnu/
+conda-meta/                  include/                     shell/
+condabin/                    lib/                         ssl/
+(base) deepak@TIGER03271:~$ cd miniconda3/cd ..
+-bash: cd: too many arguments
+(base) deepak@TIGER03271:~$ cd my_
+-bash: cd: my_: No such file or directory
+(base) deepak@TIGER03271:~$
+(base) deepak@TIGER03271:~$ ls
+miniconda3  my_unix_session  win-home
+(base) deepak@TIGER03271:~$ ssh-keygen -t ed25519 -C "deepak.kumar@tigeranalytics.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/deepak/.ssh/id_ed25519):
+Created directory '/home/deepak/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/deepak/.ssh/id_ed25519
+Your public key has been saved in /home/deepak/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:uRgnHvdvLJ5DcKFZGwICX67dLSZgm9TyM4nl/RioGYI deepak.kumar@tigeranalytics.com
+The key's randomart image is:
++--[ED25519 256]--+
+|  ... o.         |
+|   . =  . +      |
+|    * +  = +     |
+| . o % =+oo      |
+|E . * & So.      |
+|   . = % B.      |
+|    o o o.o.     |
+|          ooo    |
+|         .o+.    |
++----[SHA256]-----+
+(base) deepak@TIGER03271:~$  eval "$(ssh-agent -s)"
+Agent pid 108
+(base) deepak@TIGER03271:~$ ssh-add ~/.ssh/id_ed25519
+Identity added: /home/deepak/.ssh/id_ed25519 (deepak.kumar@tigeranalytics.com)
+(base) deepak@TIGER03271:~$ cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE27o1GDFSoIEe1lHlcrji1J7aT4hxhEe1y9og7IyJlR deepak.kumar@tigeranalytics.com
+(base) deepak@TIGER03271:~$
+
